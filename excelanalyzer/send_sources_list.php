@@ -21,7 +21,10 @@ $GLOBALS["LOCAL_DB"]->throw_exception_on_error = true; //enable exceptions for t
 //Get list of sources user has access to
 // $query = 'SELECT id, text FROM existing_sources';
 
-$query = 'SELECT id, text FROM user_access JOIN existing_sources ON sourcename = text WHERE username = %s_username';
+$query = 'SELECT id, text 
+FROM access_control JOIN existing_sources 
+ON access_control.team = existing_sources.team 
+WHERE username = %s_username';
 
 //add table name to the list of tables
 try {

@@ -7,6 +7,9 @@ jQuery(document).ready(function () {
 		minimumResultsForSearch: -1
 
 	});
+	var username = $('#username').text();
+	var user_name_form_data = new FormData();
+	user_name_form_data.append('username', username);
 	$("#source_select_tag").select2({
 		placeholder: 'Select the source',
 		width: '100%',
@@ -14,7 +17,9 @@ jQuery(document).ready(function () {
 		minimumResultsForSearch: -1,
 		ajax: {
 			url: "send_sources_list.php",
+			type: 'POST',
 			dataType: 'json',
+			data: user_name_form_data,
 			processData: false, // Don't process the files
 			contentType: false, // Set content type to false as jQuery will tell the server its a query string request                      
 			delay: 250,

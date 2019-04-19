@@ -28,7 +28,35 @@
 // $e = $db->query("SELECT email_act FROM email")->first();
 // if($e->email_act != 1 && !$user->isLoggedIn()){
 //   $user = new User();
-  // $login = $user->loginEmail(Input::get('email'), trim(Input::get('password')), 'off');
-  // if(!$login){Redirect::to('login.php?err=There+was+a+problem+logging+you+in+automatically.');}
-  //where the user goes just after login is in usersc/scripts/custom_login_script.php
+// $login = $user->loginEmail(Input::get('email'), trim(Input::get('password')), 'off');
+// if(!$login){Redirect::to('login.php?err=There+was+a+problem+logging+you+in+automatically.');}
+//where the user goes just after login is in usersc/scripts/custom_login_script.php
+// }
+
+/////// ----------------------KHALIFA Code----------------------
+
+/////// ----------------------INITIALIZATION----------------------
+ini_set('include_path', ini_get('include_path') . ';' . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
+require_once 'libraries/khalifaAPI.php';
+
+$GLOBALS["general-log"] = new MyLogPHP(EXCELANALYZER_LOG_FILE);
+
+$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, DB_USER, DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
+$LOCAL_DB->error_handler = false; // since we're catching errors, don't need error handler
+$LOCAL_DB->throw_exception_on_error = true; //enable exceptions for the DB
+
+/////// ----------------------Main checks----------------------
+// if (!isset($_POST["team"])) {
+//do nothing for now
+
+// $GLOBALS['general-log']->error('---->ERROR: source or filename not set | script= ' . __FILE__);
+// $GLOBALS["final_reply"]['status'] = 'error';
+// echo json_encode($GLOBALS["final_reply"]);
+// exit;
+// } else {
+try {
+  $GLOBALS["LOCAL_DB"]->insert('access_control', array('username' => $_POST["username"], 'team' => $_POST["team"]));
+} catch (MeekroDBException $ex) {
+  $GLOBALS["source_specific_log"]->error("EDIAGADIR---->ERROR: LOCAL DB Error: " . $ex->getMessage());
+}
 // }

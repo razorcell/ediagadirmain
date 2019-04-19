@@ -7,7 +7,19 @@
 ?>
 <!-- <label for="confirm">Pick an account ID number</label>
 <input type="number" class="form-control" min="0" step="1" name="account_id" value="" required> -->
+<!-- 
+<label for="team">Team</label>
+<input type="text" class="form-control" name="team" value="" required> -->
+
+<label for="team">Team</label>
+<select name="team" required class="form-control">
+    <option value="Equities_French">Equities_French</option>
+    <option value="Fixed_Income_ECB">Fixed_Income_ECB</option>
+    <option value="Fixed_Brazil">Fixed_Brazil</option>
+    <option value="Fixed_Perspektiva">Fixed_Perspektiva</option>
+</select>
+
 
 <?php
 //Now, go into the during_user_creation script to see how to process it.
- ?>
+?>

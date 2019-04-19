@@ -19,15 +19,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 ?>
-<div id="page-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1><?= lang("JOIN_SUC") ?><?= $settings->site_name ?></h1>
-        <p><?= lang("JOIN_THANKS"); ?></p>
-        <a href="login.php" class="btn btn-primary"><?= lang("SIGNIN_TEXT") ?></a>
-        <br /><br />
-      </div>
-    </div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h1><?= lang("JOIN_SUC") ?><?= $settings->site_name ?></h1>
+    <p><?= lang("JOIN_THANKS"); ?></p>
+    <a href="login.php" class="btn btn-primary"><?= lang("SIGNIN_TEXT") ?></a>
+    <br /><br />
   </div>
 </div>
