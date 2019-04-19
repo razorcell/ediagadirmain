@@ -1,0 +1,1 @@
+select isin,label,symbol,market,so from today t where not exists (select * from live l where (t.isin = l.isin and t.symbol = l.symbol))

@@ -1,0 +1,39 @@
+TEST NEW
+
+delete 
+1000	FR0012432516	POXEL	POXEL	Euronext Paris	24558827
+from live
+
+		SUCCESS
+
+TEST UPDATED (Symbol change)
+		
+Change 	NL0006294274	EURONEXT	ENXP	Euronext Lisbon
+to
+NL0006294274	EURONEXT	ENXPT	Euronext Lisbon
+from today
+
+		NOT DETECTED AS UPDATED
+			lets try new ?
+				SUCCESS so detected as NEW
+				
+
+TEST UPDATED (Issuer name change)
+			SUCCESS
+			
+			
+Test deleted
+delete BE0974275076 VALOR
+from today
+		
+		SUCCESS	
+				
+				
+
+
+
+
+
+
+
+

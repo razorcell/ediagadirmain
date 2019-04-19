@@ -1,0 +1,1 @@
+select t.isin, t.symbol, t.label as new_label, t.symbol as new_symbol, t.market as new_market, t.so as new_so, l.label as  old_label, l.symbol as old_symbol, l.market as old_market, l.so as old_so from today t join live l on (t.isin = l.isin and t.symbol = l.symbol) where (t.label <> l.label or t.market <> l.market or t.so <> l.so)

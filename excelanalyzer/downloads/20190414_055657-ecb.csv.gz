@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="icon" href="/fav.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<title>European Central Bank</title>
+	<meta name="author" content="European Central Bank">
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/shared/dist/css/main-ecb.min.css" media="all">
+
+	<meta property="og:title" content="European Central Bank">
+	<meta property="og:image" content="http://www.ecb.europa.eu/shared/dist/img/logos/ecb-branding.jpg">
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="227">
+	<meta property="og:image:height" content="100">
+	<meta property="og:site_name" content="European Central Bank">
+
+	<script type="text/javascript">
+		var enableGoogleServices = true;
+		if (typeof(ECB) === 'undefined') {
+			ECB = {};
+		}
+		ECB.noBreakRefresh = false;
+	</script>
+
+	<script src="/shared/dist/js/libs.min.js" type="text/javascript"></script>
+
+</head>
+
+<body class="project-ecb section-404">
+	<div id="ecb-doc-wrapper">
+		<span id="skipnavigation"></span>
+
+		<header id="ecb-doc-header">
+			<div id="ecb-headerTop">
+				<div class="ecb-langSelector">
+					<a class="ecb-topLink" href="//www.bankingsupervision.europa.eu" style="float:left;">Banking Supervision</a>
+					<div class="ecb-activeLanguage"> <span>English</span> </div>
+				</div>
+				<div class="ecb-logo">
+					<a href="/" title="ECB homepage">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 184 792 245" enable-background="new 0 184 792 245" xml:space="preserve">
+							<g id="Eurosystem">
+								<g id="EN_2_">
+									<g id="EN_3_">
+										<g>
+											<path fill="#003299" d="M141.2,355.6h-16v-21.7h15.7v4h-10.3v4.7h10v4h-10v5.3h10.7L141.2,355.6L141.2,355.6z"/>
+											<path fill="#003299" d="M170.9,334.2v12.3c0,7-5,9.7-10.7,9.7c-6.3,0-10.7-3-10.7-9.7v-12.3h5.3v12.3c0,3,2.3,5,5.3,5
+												c3,0,5.3-1.3,5.3-5.3v-12H170.9z"/>
+											<path fill="#003299" d="M189.6,334.2c4.3,0,7,3,7,6.3c0,2.3-1.3,4-3.7,5.3c2.3,1,3,3.7,6,10h-6c-2.3-4.7-3-8.7-6-8.7h-1.7v8.7
+												h-5.3v-21.7H189.6z M185.2,342.9h3c1.3,0,3-0.7,3-2.3s-1-2.3-3-2.3h-2.7v4.7H185.2z"/>
+											<path fill="#003299" d="M216.6,355.9c-8,0-12.3-5.7-12.3-11c0-5.3,4.3-11,12.3-11s12.3,6,12.3,11
+												C229,350.6,224.3,355.9,216.6,355.9z M216.6,338.2c-4,0-7,2.7-7,6.7s2.7,6.7,7,6.7c4,0,6.7-2.7,6.7-6.7S220.6,338.2,216.6,338.2
+												z"/>
+											<path fill="#003299" d="M247,334.2c5,0,7,3.3,7,6.3s-2,6.7-7,6.7h-4.3v8.7h-5.3v-21.7H247z M242.6,342.9h2.3
+												c2.3,0,3.3-1,3.3-2.7c0-1.7-1-2.3-4-2.3h-2v5H242.6z"/>
+											<path fill="#003299" d="M278,355.6h-16v-21.7h15.7v4h-10.3v4.7h10v4h-10v5.3H278L278,355.6L278,355.6z"/>
+											<path fill="#003299" d="M308.7,355.6H303l-1.7-4.3h-9.7l-1.7,4.3h-5.7l8.7-21.7h6.3L308.7,355.6z M296,339.2l-3,8.3h6.7
+												L296,339.2z"/>
+											<path fill="#003299" d="M337.4,355.6h-4.7l-12-13.7v13.7h-5.3v-21.7h5l11.7,13.4v-13.4h5.3V355.6z"/>
+											<path fill="#003299" d="M379.8,353.9c-3,1.7-5.3,2-8.3,2c-8.3,0-12.7-5.3-12.7-11s4.7-11,13-11c3,0,5.7,0.7,7.7,2v4.7
+												c-2.3-1.3-4.7-2.3-7.3-2.3c-4.7,0-7.7,2.7-7.7,6.7s3.3,6.7,7.7,6.7c2.7,0,4.7-1,7.7-2.3L379.8,353.9L379.8,353.9z"/>
+											<path fill="#003299" d="M404.2,355.6h-16v-21.7h15.7v4h-10v4.7h10v4h-10v5.3h10.7v3.7H404.2z"/>
+											<path fill="#003299" d="M434.5,355.6h-4.7l-12-13.7v13.7h-5.3v-21.7h5l11.7,13.4v-13.4h5.3L434.5,355.6L434.5,355.6z"/>
+											<path fill="#003299" d="M463.3,337.9h-7.7v17.7h-5.3v-17.7h-7.7v-4h21v4H463.3z"/>
+											<path fill="#003299" d="M480.3,334.2c4.3,0,7,3,7,6.3c0,2.3-1.3,4-3.7,5.3c2.3,1,3,3.7,6,10h-6c-2.3-4.7-3-8.7-6-8.7h-1.7v8.7
+												h-5.3v-21.7H480.3z M476.3,342.9h3c1.3,0,3-0.7,3-2.3s-1-2.3-3-2.3h-2.7v4.7H476.3z"/>
+											<path fill="#003299" d="M518.7,355.6H513l-1.7-4.3h-9.7l-1.7,4.3h-5.7l8.7-21.7h6.3L518.7,355.6z M506,339.2l-3,8.3h6.7
+												L506,339.2z"/>
+											<path fill="#003299" d="M542,355.6h-16.4v-21.7h5.3v17.7h11L542,355.6L542,355.6z"/>
+											<path fill="#003299" d="M571.7,334.2c5,0,7,3,7,5.3c0,1.7-1,3.3-3,4.3c3,0.7,4.7,3,4.7,5.7c0,2.3-1.3,6.3-7.7,6.3H562v-21.7
+												H571.7z M567.7,342.5h2.7c2,0,2.7-1.3,2.7-2.3c0-1-0.7-2.3-2.7-2.3h-2.7V342.5z M567.7,351.6h3c3,0,4-0.7,4-2.7
+												c0-1.7-1.3-2.3-3.3-2.3h-3.7L567.7,351.6L567.7,351.6z"/>
+											<path fill="#003299" d="M610.8,355.6h-5.7l-1.7-4.3h-9.7l-1.7,4.3h-5.7l8.7-21.7h6.3L610.8,355.6z M598.4,339.2l-3,8.3h6.7
+												L598.4,339.2z"/>
+											<path fill="#003299" d="M639.5,355.6h-4.7l-12-13.7v13.7h-5.3v-21.7h5l11.7,13.4v-13.4h5.3V355.6z"/>
+											<path fill="#003299" d="M659.8,344.2l9.7,11.3h-6.7l-8.7-10v10h-5.3v-21.7h5.3v10l0,0l6.7-9.7h6L659.8,344.2z"/>
+										</g>
+										<g>
+											<path fill="#003299" d="M296.4,404H287v6.7h8.7v2.7H287v6.7h9.3v2.7h-12.7V401H296v3H296.4z"/>
+											<path fill="#003299" d="M322.4,414.3c0,5.3-3,8.7-9.7,8.7c-4.7,0-9-2.7-9-8.3v-13.4h3V414c0,2.3,0.3,3.3,1.3,4.3
+												c1.3,1.3,2.7,2,4.7,2c2.3,0,4-0.7,5-1.7c1-1,1.3-2.7,1.3-4.7v-12.7h3v13H322.4z"/>
+											<path fill="#003299" d="M336.4,401.3c4.3,0,7,2.3,7,6c0,2.7-1.3,4.3-3.7,5.3c2,1.3,3,3.3,4.7,6c1,1.3,1.3,2.3,3,4.3h-3.7l-3-4.3
+												c-3-4.3-4-5-5.7-5h-1.3v9.3h-3v-21.7L336.4,401.3L336.4,401.3z M334.1,410.6h2c3.3,0,4.3-1.7,4.3-3.7c0-2-1.3-3.3-4.3-3.3h-2
+												V410.6z"/>
+											<path fill="#003299" d="M364.1,401c7,0,11.7,5,11.7,11c0,5.7-4.3,11-11.7,11c-7,0-11.7-5.3-11.7-11
+												C352.8,406,357.1,401,364.1,401z M364.1,420.3c5,0,8.3-3.7,8.3-8.3s-3.7-8.3-8.3-8.3s-8.3,3.3-8.3,8.3
+												C355.8,416.6,359.5,420.3,364.1,420.3z"/>
+											<path fill="#003299" d="M394.2,406c-1.7-1.7-3.7-2.3-5-2.3c-2,0-3.3,1-3.3,2.7c0,4,9.3,4,9.3,11c0,3.3-2.7,6-6,6
+												c-2.3,0-4.3-0.7-6-2v-4c1.7,2,3.7,3,5.7,3c2.3,0,3.7-1.7,3.7-2.7c0-4.3-9.3-5-9.3-11c0-3.7,2.7-5.7,6.7-5.7
+												c1.7,0,3.3,0.7,4.7,1.7v3.3H394.2z"/>
+											<path fill="#003299" d="M415.9,401.3h3.7l-8,10.3V423h-3v-11.3l-8-10h3.7l5.7,7.3L415.9,401.3z"/>
+											<path fill="#003299" d="M435.9,406c-2-1.7-3.7-2.3-5-2.3c-2,0-3.3,1-3.3,2.7c0,4,9.3,4,9.3,11c0,3.3-2.7,6-6,6
+												c-2.3,0-4.3-0.7-6-2v-4c1.7,2,3.7,3,5.7,3c2.3,0,3.7-1.7,3.7-2.7c0-4.3-9.3-5-9.3-11c0-3.7,2.7-5.7,6.7-5.7
+												c1.7,0,3.3,0.7,4.7,1.7v3.3H435.9z"/>
+											<path fill="#003299" d="M460.6,404h-7.3v18.7h-3V404h-7.3v-2.7h18v2.7H460.6z"/>
+											<path fill="#003299" d="M479.9,404h-9v6.7h8.7v2.7h-8.7v6.7h9.3v2.7h-12.7V401h12.3V404z"/>
+											<path fill="#003299" d="M508,423h-3v-16.7l0,0l-6.7,8.3h-0.7l-6.7-8.3l0,0V423h-3v-21.7h3l7,9l7.3-9h3V423H508z"/>
+										</g>
+									</g>
+								</g>
+							</g>
+							<g id="Elements">
+								<g>
+									<path fill="#003299" d="M330.8,230.1h18c0,0.7,0,1.3,0,2.3c0,27.4,22,49.4,49.4,49.4s49.4-22,49.4-49.4c0-0.7,0-1.3,0-2.3h18v69.4
+										H330.8V230.1L330.8,230.1z"/>
+									<path fill="#003299" d="M353.1,232.4c0-24.7,20-44.7,44.7-44.7c24.7,0,44.7,20,44.7,44.7s-20,44.7-44.7,44.7
+										C373.5,277.1,353.1,257.1,353.1,232.4L353.1,232.4z"/>
+									<polygon fill="#FFF315" points="402.5,195 399.8,197 400.8,200 398.2,198.4 395.5,200 396.5,197 393.8,195 397.2,195 398.2,192
+										399.2,195 		"/>
+									<polygon fill="#FFF315" points="402.5,266.8 399.8,268.8 400.8,271.8 398.2,270.1 395.5,271.8 396.5,268.8 393.8,266.8
+										397.2,266.8 398.2,263.8 399.2,266.8 		"/>
+									<polygon fill="#FFF315" points="420.2,200 417.5,202 418.5,205 416.2,203 413.5,205 414.5,202 411.9,200 414.9,200 416.2,196.7
+										417.2,200 		"/>
+									<polygon fill="#FFF315" points="433.5,213 430.9,215.1 431.9,218.1 429.2,216.1 426.5,218.1 427.5,215.1 424.9,213 428.2,213
+										429.2,210 430.2,213 		"/>
+									<polygon fill="#FFF315" points="438.2,231.1 435.5,233.1 436.6,236.1 433.9,234.1 431.2,236.1 432.2,233.1 429.5,231.1
+										432.9,231.1 433.9,228.1 434.9,231.1 		"/>
+									<polygon fill="#FFF315" points="433.5,249.1 430.9,250.8 431.9,254.1 429.2,252.1 426.5,254.1 427.5,250.8 424.9,249.1
+										428.2,249.1 429.2,245.8 430.2,249.1 		"/>
+									<polygon fill="#FFF315" points="420.2,262.1 417.5,264.1 418.5,267.1 416.2,265.1 413.5,267.1 414.5,264.1 411.9,262.1
+										414.9,262.1 416.2,259.1 417.2,262.1 		"/>
+									<polygon fill="#FFF315" points="384.5,262.1 381.8,264.1 382.8,267.1 380.1,265.1 377.5,267.1 378.5,264.1 375.8,262.1
+										379.1,262.1 380.1,259.1 381.1,262.1 		"/>
+									<polygon fill="#FFF315" points="366.5,231.1 363.8,233.1 364.8,236.1 362.1,234.1 359.5,236.1 360.5,233.1 358.1,231.1
+										361.1,231.1 362.1,228.1 363.1,231.1 		"/>
+									<polygon fill="#FFF315" points="384.5,200 381.8,202 382.8,205 380.1,203 377.5,205 378.5,202 375.8,200 379.1,200 380.1,196.7
+										381.1,200 		"/>
+									<polygon fill="#FFF315" points="371.1,213 368.8,215.1 369.8,218.1 367.1,216.1 364.5,218.1 365.5,215.1 362.8,213 366.1,213
+										367.1,210 368.1,213 		"/>
+									<polygon fill="#FFF315" points="371.1,249.1 368.8,250.8 369.8,254.1 367.1,252.1 364.5,254.1 365.5,250.8 362.8,249.1
+										366.1,249.1 367.1,245.8 368.1,249.1 		"/>
+									<path fill="#FFF315" d="M371.1,226.4h5.3c2.7-10.7,12.3-18.4,24-18.4c6.7,0,13,2.7,17.4,7.3l-1.7,4.3c-3.7-4.3-9.3-7.3-15.7-7.3
+										c-9.3,0-17,6-19.7,14.4h32.4l-1.7,4h-31.7c0,0.7,0,1.3,0,2s0,1.3,0,2h29.7l-1.7,4h-27.4c2.7,8.3,10.3,14.4,19.7,14.4
+										c6.3,0,12-3,15.7-7.3v5.7c-4.3,3.7-9.7,5.7-15.7,5.7c-11.3,0-21-8-24-18.4h-7l1.7-4h4.7c0-0.7,0-1.3,0-2s0-1.3,0-2h-6.3
+										L371.1,226.4L371.1,226.4z"/>
+									<rect x="319.7" y="375.9" fill="#003299" width="156.9" height="2.3"/>
+								</g>
+							</g>
+						</svg>
+						<div class="foreignObject"><img src="/shared/dist/img/logos/logos-ecb/ECB_EN_RGB.png" alt="ECB logo"></div>
+					</a>
+				</div>
+				<div id="ecb-mobileNavWrapper">
+					<div class="ecb-quickSearch">
+						<form id="quickSearch-form" action="/home/search/html/index.en.html">
+					    <input id="quickSearch-input" name="q" type="text">
+							<button type="submit" id="quickSearch-submit"><span class="fa fa-search"></span></button>
+						</form>
+					</div>
+
+					<span id="ecb-mobileNavToggle"><span class="helptext">Menu</span></span>
+				</div>
+				<div class="ecb-serviceNav">
+					<div class="socialLinks">
+						<ul>
+							<li>Follow us</li>
+				            <li><a href="https://plus.google.com/106801572747733939594" class="google-plus"></a></li>
+				            <li><a href="http://twitter.com/ecb" class="twitter"></a></li>
+				            <li><a href="http://www.youtube.com/ecbeuro" class="youtube"></a></li>
+				            <li><a href="https://www.flickr.com/photos/europeancentralbank/sets/" class="flickr"></a></li>
+							<li><a href="https://www.linkedin.com/company/european-central-bank" class="linkedin"></a></li>
+				            <li><a href="/rss" class="rss"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="ecb-mainnavwrapper">
+				<nav id="ecb-mainnav">
+					<ul class="ecb-primaryNav">
+						<li id="navecb" class="ecb-topicColor1 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/ecb/html/index.en.html" onclick="return window.location=this.href;"><span>About</span></a>
+							</span>
+						</li>
+
+						<li id="navpress" class="ecb-topicColor2 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/press/html/index.en.html" onclick="return window.location=this.href;"><span>Media</span></a>
+							</span>
+						</li>
+
+						<li id="navexplainers" class="ecb-topicColor3 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/explainers/html/index.en.html" onclick="return window.location=this.href;"><span>Explainers</span></a>
+							</span>
+						</li>
+
+						<li id="navpub" class="ecb-topicColor4 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/pub/html/index.en.html" onclick="return window.location=this.href;"><span>Research &amp; Publications</span></a>
+							</span>
+						</li>
+
+						<li id="navstats" class="ecb-topicColor5 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/stats/html/index.en.html" onclick="return window.location=this.href;"><span>Statistics</span></a>
+							</span>
+						</li>
+
+						<li id="naveuro" class="ecb-topicColor6 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/euro/html/index.en.html" onclick="return window.location=this.href;"><span>The €uro</span></a>
+							</span>
+						</li>
+
+						<li id="navmopo" class="ecb-topicColor7 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/mopo/html/index.en.html" onclick="return window.location=this.href;"><span>Monetary Policy</span></a>
+							</span>
+						</li>
+
+						<li id="navpaym" class="ecb-topicColor8 ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/paym/html/index.en.html" onclick="return window.location=this.href;"><span>Payments &amp; Markets</span></a>
+							</span>
+						</li>
+
+						<li id="navcareers" class="ecb-topicColor9 ecb-navParent">
+							<span>
+							<span class="ecb-navNodeIcon"></span>
+							<a href="/careers/html/index.en.html" onclick="return window.location=this.href;"><span>Careers</span></a>
+							</span>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="ecb-breadcrumbwrapper"><nav id="ecb-breadcrumbs">
+			<p>
+				<span class="invisibleitem" lang="en">Navigation Path: </span>
+				<a href="/">Home</a><span class="ecb-bcSeparator">›</span> <span class="ecb-bcCurrent">Page not found</span>
+			</p>
+		</nav></div>
+
+		<div id="ecb-main-wrapper">
+			<div id="ecb-sectionnav-col">
+				<nav id="ecb-sectionNav">
+					<h1><a href="/home/html/index-notused.en.html">Services</a></h1>
+					<ul class="ecb-secondaryNav">
+						<li>
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/home/sitedir/html/index.en.html">Site directory</a>
+							</span>
+						</li>
+						<li>
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/home/disclaimer/html/index.en.html">Disclaimer & copyright</a>
+							</span>
+						</li>
+						<li>
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/home/languagepolicy/html/index.en.html">Language policy of this website</a>
+							</span>
+						</li>
+						<li>
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/home/glossary/html/index.en.html">Glossary</a>
+							</span>
+						</li>
+						<li>
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/home/links/html/index.en.html">Other institutions</a>
+							</span>
+						</li>
+						<li class="ecb-navParent">
+							<span>
+								<span class="ecb-navNodeIcon"></span>
+								<a href="/home/contacts/html/index.en.html">Contacts</a>
+							</span>
+							<ul>
+								<li>
+									<span>
+										<span class="ecb-navNodeIcon"></span>
+										<a href="/home/contacts/address/html/index.en.html">Address</a>
+									</span>
+								</li>
+								<li>
+									<span>
+										<span class="ecb-navNodeIcon"></span>
+										<a href="/home/contacts/working-hours/html/index.en.html">Working hours</a>
+									</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div id="ecb-content-col">
+				<main>
+					<h1>Page not found</h1>
+					<p>It seems that the page you are looking for has been moved. </p>
+					<p>You could try the following:</p>
+					<ol>
+						<li>Use the search at the top of the page to find material on this site.</li>
+						<li>Visit the <a class="link-inline" href="/home/sitedir/html/index.en.html"> site directory</a>.</li>
+						<li>Return to the <a href="/home/html/index.en.html">homepage</a> and find the information again.</li>
+					</ol>
+					<p>If that does not work, please email <a class="mail" href="mailto:webmaster@ecb.europa.eu">ECB webmasters</a>.
+					</p>
+
+					<script type="text/javascript">
+						var currentContentsUrl = "/home/html/404_content.en.html";
+					</script>
+				</main>
+			</div>
+
+			<div id="ecb-crossnav-col"></div>
+		</div>
+
+		<footer id="ecb-doc-footer">
+			<div class="ecb-footerTop">
+				<a href="/home/sitedir/html/index.en.html" class="sitemap" title="Site Directory">Site directory</a>
+				<div class="socialLinks">
+					<ul>
+						<li>Follow us</li>
+						<li>
+							<a href="https://plus.google.com/106801572747733939594" class="google-plus"></a>
+						</li>
+						<li>
+							<a href="http://twitter.com/ecb" class="twitter"></a>
+						</li>
+						<li>
+							<a href="http://www.youtube.com/ecbeuro" class="youtube"></a>
+						</li>
+						<li>
+							<a href="https://www.flickr.com/photos/europeancentralbank/sets/" class="flickr"></a>
+						</li>
+						<li>
+							<a href="/rss" class="rss"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			
+			<div class="ecb-footerBottom">   
+				<p>
+					<span>Copyright , </span>European Central Bank
+				</p> 
+				
+				<div class="ecb-serviceNavigation">
+					<div class="ecb-serviceNavigationBox">
+						<div class="ecb-serviceNavigationBoxTitle">Work with us</div>
+						<div class="ecb-serviceNavigationBoxLinks">
+							<ul>
+								<li><a href="/careers/vacancies/html/index.en.html">Vacancies</a></li>
+								<li><a href="/careers/what-we-offer/traineeship/html/index.en.html">Traineeship</a></li>
+								<li><a href="/ecb/jobsproc/html/index.en.html">Procurement</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ecb-serviceNavigationBox">
+						<div class="ecb-serviceNavigationBoxTitle">Useful links</div>
+						<div class="ecb-serviceNavigationBoxLinks">
+							<ul>
+								<li><a href="/home/socialmedia/html/index.en.html">Social media</a></li>
+								<li><a href="/home/glossary/html/index.en.html">Glossary</a></li>
+								<li><a href="/home/links/html/index.en.html">Other institutions</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ecb-serviceNavigationBox">
+						<div class="ecb-serviceNavigationBoxTitle">Using our site</div>
+						<div class="ecb-serviceNavigationBoxLinks">
+							<ul>
+								<li><a href="/home/disclaimer/html/index.en.html">Disclaimer &amp; Copyright</a></li>
+								<li><a href="/home/data-protection/html/index.en.html">Data protection</a></li>
+								<li><a href="/home/languagepolicy/html/index.en.html">Language policy</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ecb-serviceNavigationBox">
+						<div class="ecb-serviceNavigationBoxTitle">Contact</div>
+						<div class="ecb-serviceNavigationBoxLinks">
+							<ul>
+								<li><a href="/home/contacts/html/index.en.html">Contacts</a></li>
+								<li><a href="/home/contacts/address/html/index.en.html">Address</a></li>
+								<li><a href="/home/contacts/working-hours/html/index.en.html">Working hours</a></li>
+							</ul>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+
+		</footer>
+	</div>
+
+	<script src="/shared/dist/js/main.min.js" type="text/javascript"></script>
+
+	<!-- Google Analytics -->
+	<script>
+	(function() {
+		var afterPrint = function() {
+			ga('send',{
+			  'hitType': 'event',
+			  'eventCategory': 'print',
+			  'eventAction': 'print',
+			  'eventLabel': window.location.pathname,
+			  'page': window.location.pathname
+			});
+		};
+		if (window.matchMedia) {
+			var mediaQueryList = window.matchMedia('print');
+			mediaQueryList.addListener(function(mql) {
+				if (!mql.matches) {
+					afterPrint();
+				}
+			});
+		}
+
+		var addLiveUpdateTracking = function(){
+			$('.onoffswitch').unbind('mousedown');
+			$('.onoffswitch').mousedown(function(){
+				ga('send',{
+				  'hitType': 'event',
+				  'eventCategory': 'liveupdate',
+				  'eventAction': 'switch',
+				  'eventLabel': (!Boolean(ECB.autoUpdate)?'on':'off'),
+				  'page': window.location.pathname
+				});
+
+			});
+		}
+
+		var addSocialMediaTracking = function(){
+			var sl = document.querySelectorAll('ul.socialSharing>li');
+			for(var i=0;i<sl.length;i++)
+			{
+				sle = sl[i];
+				var slClass = sle.classList[0];
+
+				var a = function(s){
+					sle.onclick = function(e){
+					ga('send',{
+							'hitType': 'event',
+							'eventCategory': 'share',
+							'eventAction': s,
+						'eventLabel': window.location.pathname,
+								'page': window.location.pathname
+					});
+
+					}
+				};
+				a(slClass);
+			}
+		}
+
+		addSocialMediaTracking();
+		addLiveUpdateTracking();
+
+		window.onafterprint = afterPrint;
+	}());
+	</script>
+    <!-- End Google Analytics -->
+
+	<!-- Google Search -->
+	<script src="https://www.google.com/jsapi?key=AIzaSyBt3cQcBJIphfR_gVjG8mMwcCEyq6KK-cY" type="text/javascript"></script>
+	<script type="text/javascript">
+    google.load( 'search', '1' );
+    google.setOnLoadCallback( function() {
+        google.search.CustomSearchControl.attachAutoCompletion(
+            '004279095417537646336:rqytoqokwuk',
+            document.getElementById( 'quickSearch-input' ),
+            'quickSearch-form' );
+
+        if ( document.body.classList.contains('sub-search') ) {
+			var customSearchOptions = {};
+			var orderByOptions = {};
+			orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+			customSearchOptions['enableOrderBy'] = true;
+			customSearchOptions['orderByOptions'] = orderByOptions;
+
+			var imageSearchOptions = {};
+			imageSearchOptions['layout'] = 'google.search.ImageSearch.LAYOUT_COLUMN';
+			customSearchOptions['enableImageSearch'] = true;
+			google.search.B.prototype.Wk = function(a,b){};
+
+			var customSearchControl =   new google.search.CustomSearchControl('004279095417537646336:rqytoqokwuk', customSearchOptions);
+			customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+
+			var options = new google.search.DrawOptions();
+			options.enableSearchResultsOnly();
+			options.setAutoComplete(true);
+			customSearchControl.draw('cse', options);
+
+			function parseParamsFromUrl() {
+				var params = {};
+				var parts = window.location.search.substr(1).split('&');
+				for (var i = 0; i < parts.length; i++) {
+					var keyValuePair = parts[i].split('=');
+					var key = decodeURIComponent(keyValuePair[0]);
+					params[key] = keyValuePair[1] ?
+					decodeURIComponent(keyValuePair[1].replace(/\+/g, ' ')) :
+					keyValuePair[1];
+				}
+				return params;
+			}
+			urlParams = parseParamsFromUrl();
+			var queryParamName = 'q';
+			if (urlParams[queryParamName]) {
+				customSearchControl.execute(urlParams[queryParamName]);
+			}
+		}
+	}, true);
+	</script>
+	<!-- End Google Search -->
+
+    <!-- Google Tag Manager -->
+	<noscript>
+	<iframe src="//www.googletagmanager.com/ns.html?id=GTM-NVKFGW"
+		height="0" width="0" style="display:none;visibility:hidden">
+	</iframe>
+	</noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NVKFGW');</script>
+    <!-- End Google Tag Manager -->
+
+	<link rel="stylesheet" href="/shared/dist/css/print.min.css" media="print">
+
+</body>
+</html>
