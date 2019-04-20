@@ -20,7 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //if you are ever questioning if your classes are being included, uncomment the line below and the words "autoloader class included" should show at the top of your page.
 //bold("<br><br>autoloader class included");
-class Autoloader {
+class Autoloader
+{
 	/**
 	 * File extension as a string. Defaults to ".php".
 	 */
@@ -46,7 +47,8 @@ class Autoloader {
 	 *
 	 * @param string $className
 	 */
-	public static function loader($className) {
+	public static function loader($className)
+	{
 
 		//$directory = new RecursiveDirectoryIterator(static::$pathTop, RecursiveDirectoryIterator::SKIP_DOTS);
 
@@ -54,10 +56,10 @@ class Autoloader {
 
 			//static::$fileIterator = new RecursiveIteratorIterator($directory, RecursiveIteratorIterator::LEAVES_ONLY);
 			static::$fileIterator =  new RecursiveIteratorIterator(
-					 new RecursiveDirectoryIterator(static::$pathTop, RecursiveDirectoryIterator::SKIP_DOTS),
-					   RecursiveIteratorIterator::SELF_FIRST,
-					   RecursiveIteratorIterator::CATCH_GET_CHILD // Ignore "Permission denied"
-				         );
+				new RecursiveDirectoryIterator(static::$pathTop, RecursiveDirectoryIterator::SKIP_DOTS),
+				RecursiveIteratorIterator::SELF_FIRST,
+				RecursiveIteratorIterator::CATCH_GET_CHILD // Ignore "Permission denied"
+			);
 		}
 
 		$filename = $className . static::$fileExt;
@@ -69,14 +71,10 @@ class Autoloader {
 				if ($file->isReadable()) {
 
 					include_once $file->getPathname();
-
 				}
 				break;
-
 			}
-
 		}
-
 	}
 
 	/**
@@ -84,7 +82,8 @@ class Autoloader {
 	 *
 	 * @param string $fileExt The file extension used for class files.  Default is "php".
 	 */
-	public static function setFileExt($fileExt) {
+	public static function setFileExt($fileExt)
+	{
 		static::$fileExt = $fileExt;
 	}
 
@@ -94,10 +93,10 @@ class Autoloader {
 	 * @param string $path The path representing the top level where recursion should
 	 *                     begin. Defaults to the current directory.
 	 */
-	public static function setPath($path) {
+	public static function setPath($path)
+	{
 		static::$pathTop = $path;
 	}
-
 }
 
 Autoloader::setFileExt('.php');
