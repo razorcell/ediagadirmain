@@ -1,7 +1,7 @@
 <?php // You need to add server side validation and better error handling here
 ini_set('upload-max-filesize', '400M');
 ini_set('post_max_size', '400M');
-ini_set('include_path', ini_get('include_path') . ';' . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
+ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR. $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
 include_once 'libraries/khalifaAPI.php';
 
 

@@ -1,6 +1,6 @@
 <?php
 
-ini_set('include_path', ini_get('include_path') . ';' . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
+ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
 include_once 'libraries/khalifaAPI.php';
 
 $GLOBALS["general-log"] = new MyLogPHP(EXCELANALYZER_LOG_FILE);
@@ -11,7 +11,7 @@ $GLOBALS["LOCAL_DB"]->error_handler = false; // since we're catching errors, don
 $GLOBALS["LOCAL_DB"]->throw_exception_on_error = true; //enable exceptions for the DB
 //Getting the data
 $source = strtolower($_POST["source"]);
-$table_type = $_POST["table_type"];
+$table_type = strtolower($_POST["table_type"]);
 //get columns array for the table
 $columns = $GLOBALS["LOCAL_DB"]->columnList($source . '_' . $table_type);
 $columns_var = array();

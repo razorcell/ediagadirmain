@@ -1,6 +1,6 @@
 <?php
 
-ini_set('include_path', ini_get('include_path') . ';' . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
+ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
 require_once 'libraries/khalifaAPI.php';
 
 /////// ----------------------INITIALIZATION 1 ----------------------
