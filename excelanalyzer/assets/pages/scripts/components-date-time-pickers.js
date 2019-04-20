@@ -50,7 +50,7 @@ var ComponentsDateTimePickers = function () {
 
         $('#defaultrange').daterangepicker({
                 opens: (App.isRTL() ? 'left' : 'right'),
-                format: 'YYYY-MM-DD',
+                format: 'MM/DD/YYYY',
                 separator: ' to ',
                 startDate: moment().subtract('days', 29),
                 endDate: moment(),
@@ -66,8 +66,7 @@ var ComponentsDateTimePickers = function () {
                 maxDate: '12/31/2018',
             },
             function (start, end) {
-                //$('#defaultrange input').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-				$('#defaultrange input').val(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+                $('#defaultrange input').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
         );        
 
