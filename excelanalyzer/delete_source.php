@@ -12,19 +12,20 @@ $GLOBALS["final_reply"] = array(
 );
 /////// ----------------------Main checks----------------------
 
-if (!isset($_POST["admin_password"]) or !isset($_POST["source"])) {
+// if (!isset($_POST["admin_password"]) or !isset($_POST["source"])) {
+if (!isset($_POST["source"])) {
     exitAppOnError('-->ERROR: Missing source or password | script= ' . __FILE__);
 }
-if ($_POST["admin_password"] !== 'Edmk1123581321') {
-    exitAppOnError('-->ERROR: incorrect Password | script= ' . __FILE__);
-}
+// if ($_POST["admin_password"] !== 'Edmk1123581321') {
+//     exitAppOnError('-->ERROR: incorrect Password | script= ' . __FILE__);
+// }
 
 /////// ----------------------INITIALIZATION 2 ----------------------
 
 $GLOBALS['general-log']->warning('');
 $GLOBALS['general-log']->warning('Delete source = ' . $_POST["source"]);
 
-$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, DB_USER, DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
+$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, EXCELANALYZER_DB_USER, EXCELANALYZER_DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
 $LOCAL_DB->error_handler = false; // since we're catching errors, don't need error handler
 $LOCAL_DB->throw_exception_on_error = true; //enable exceptions for the DB
 

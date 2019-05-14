@@ -1,12 +1,12 @@
 <?php // You need to add server side validation and better error handling here
 ini_set('upload-max-filesize', '400M');
 ini_set('post_max_size', '400M');
-ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR. $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
+ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
 include_once 'libraries/khalifaAPI.php';
 
 
 
-$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, DB_USER, DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
+$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, EXCELANALYZER_DB_USER, EXCELANALYZER_DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
 $LOCAL_DB->error_handler = false; // since we're catching errors, don't need error handler
 $LOCAL_DB->throw_exception_on_error = true; //enable exceptions for the DB
 
@@ -16,6 +16,8 @@ $GLOBALS["final_reply"] = array(
 	"status" => "success",
 	"data" => ""
 );
+
+sleep(1.5);
 
 /////// ----------------------Main checks----------------------
 
@@ -40,7 +42,10 @@ foreach ($_FILES as $file) {
 		$GLOBALS['source_specific_log']->success('SUCCESS: File Uploaded : ' . $file['name']);
 		// $log->success('SUCCESS: File Uploaded : ' . $file['name']);
 	} else {
-		$GLOBALS['source_specific_log']->error("Source: " . $_POST['source'] . "---->ERROR: Could not move file to the right directory | script= " . __FILE__);
+		$GLOBALS['source_specific_log']->error("Source: " . $_POST['source'] . "---->ERROR: Uploading with code: " . $file["error"] . " | script= " . __FILE__);
+		$GLOBALS["final_reply"]['status'] = 'error';
+		echo json_encode($GLOBALS["final_reply"]);
+		exit;
 	}
 }
 

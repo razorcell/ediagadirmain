@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', "192.168.1.153");
+define('DB_HOST', "192.168.1.154");
 define('DB_LOCALHOST', "127.0.0.1");
 define('DB_USER', "root");
-define('DB_PASSWORD', "");
+define('DB_PASSWORD', "0verlordX");
 define('DB_DATABASE_EURONEXT', "euronext2018");
 define('DB_DATABASE_ZONEBOURSE', "zonebourse");
 define('DB_DATABASE_GMCALENDAR', "gmcalendar");
@@ -19,7 +19,9 @@ define('DB_DIV_CALENDAR_DBNAME', "smart_calendar");
 //Excel analyzer
 //LOCAL
 define('EXCELANALYZER_DB_NAME', "excelanalyzer");
-define('EXCELANALYZER_DB_HOST', "localhost");
+define('EXCELANALYZER_DB_HOST', "192.168.1.154");
+define('EXCELANALYZER_DB_USER', "root");
+define('EXCELANALYZER_DB_PASSWORD', "0verlordX");
 define('EXCELANALYZER_LOG_FILE', $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'excelanalyzer' . DIRECTORY_SEPARATOR . 'log' . DIRECTORY_SEPARATOR . 'ExcelAnalyzer.csv');
 
 //Euronext2018

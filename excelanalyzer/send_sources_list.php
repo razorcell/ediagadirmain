@@ -1,5 +1,5 @@
 <?php
-ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR. $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
+ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] . '/khalifaAPI/');
 include_once 'libraries/khalifaAPI.php';
 
 /////// ----------------------INITIALIZATION 1 ----------------------
@@ -11,9 +11,8 @@ if (!isset($_POST["username"])) {
     exitAppOnError("Not logged in !");
 }
 
-
 //Local smart_calendar DB connection
-$GLOBALS["LOCAL_DB"] = new MeekroDB(EXCELANALYZER_DB_HOST, DB_USER, DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
+$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, EXCELANALYZER_DB_USER, EXCELANALYZER_DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
 $GLOBALS["LOCAL_DB"]->error_handler = false; // since we're catching errors, don't need error handler
 $GLOBALS["LOCAL_DB"]->throw_exception_on_error = true; //enable exceptions for the DB
 

@@ -24,7 +24,7 @@
   direction: ltr;
 }
 .fileinput {
-  display: inline-block;
+  /*display: inline-block;*/
   margin-bottom: 9px;
 }
 .fileinput .form-control {
@@ -56,7 +56,7 @@
   display: inline;
 }
 .fileinput-filename {
-  display: inline-block;
+  /*display: inline-block;*//*To make sure that file name is still visible even if too long*/
   overflow: hidden;
   vertical-align: middle;
 }

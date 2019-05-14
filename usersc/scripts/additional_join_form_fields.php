@@ -13,10 +13,13 @@
 
 <label for="team">Team</label>
 <select name="team" required class="form-control">
-    <option value="Equities_French">Equities_French</option>
+    <option value="Fixed_Income_Euronext">Fixed_Income_Euronext</option>
     <option value="Fixed_Income_ECB">Fixed_Income_ECB</option>
-    <option value="Fixed_Brazil">Fixed_Brazil</option>
-    <option value="Fixed_Perspektiva">Fixed_Perspektiva</option>
+    <option value="Fixed_Income_Brazil">Fixed_Income_Brazil</option>
+    <option value="Fixed_Income_Perspektiva">Fixed_Income_Perspektiva</option>
+    <option value="Fixed_Income_Bolsar">Fixed_Income_Bolsar</option>
+    <option value="Fixed_Income_MAE">Fixed_Income_MAE</option>
+    <option value="Equities_French">Equities_French</option>
 </select>
 
 

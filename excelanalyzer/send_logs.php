@@ -4,7 +4,7 @@ ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . $_SERVER['DOC
 include_once 'libraries/khalifaAPI.php';
 
 /////// ----------------------INIT----------------------
-$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, DB_USER, DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
+$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, EXCELANALYZER_DB_USER, EXCELANALYZER_DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
 $LOCAL_DB->error_handler = false; // since we're catching errors, don't need error handler
 $LOCAL_DB->throw_exception_on_error = true; //enable exceptions for the DB
 
@@ -16,7 +16,7 @@ $response = array("general_logs" => "", "source_specific_logs" => "");
 if (empty(EXCELANALYZER_LOG_FILE)) {
     $GLOBALS['general-log']->error('General log file unknown' . ' | script= ' . __FILE__);
 } else {
-    $response["general_logs"] = ReadFromEndByLine(EXCELANALYZER_LOG_FILE, 37);
+    $response["general_logs"] = ReadFromEndByLine(EXCELANALYZER_LOG_FILE, 32);
 }
 
 /////// ----------------------Get source specific logs ----------------------
@@ -39,11 +39,12 @@ if (isset($_POST['source']) and !empty($_POST['source'])) {
         // $GLOBALS['general-log']->error('Source specific log file unknown');
         $response["source_specific_logs"] = "";
     } else {
-        $response["source_specific_logs"] = ReadFromEndByLine($source_details[0]['logfile'], 37);
+        $response["source_specific_logs"] = ReadFromEndByLine($source_details[0]['logfile'], 32);
     }
 }
 
 /////// ----------------------END ----------------------
+
 echo json_encode($response);
 
 function ReadFromEndByLine($filename, $lines)

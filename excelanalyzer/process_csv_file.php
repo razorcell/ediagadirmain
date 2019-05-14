@@ -39,33 +39,53 @@ $LOCAL_DB->throw_exception_on_error = true; //enable exceptions for the DB
 
 // retrieve the csv file name
 $file_name = "uploads/" . $_POST["file_name"];
-$source = strtolower($_POST["source"]);
+$source = $_POST["source"];
 
 $GLOBALS["source_specific_log"] = new MyLogPHP(getLogFilePathFromSource($source));
 
-
-
 $GLOBALS["all_data"] = array();
-
 
 $GLOBALS["source_specific_log"]->info("");
 $GLOBALS["source_specific_log"]->info("Updating the source - <strong>" . $source . "</strong> - started on " . @date("Y-m-d h:i:s"));
 
 /////// ----------------------STEP 1 Reading the file----------------------
 
+//Get encoding from DB
+try {
+	$encoding = $GLOBALS["LOCAL_DB"]->query('SELECT encoding FROM existing_sources WHERE text = %s', $source)[0];
+} catch (MeekroDBException $ex) {
+	$GLOBALS["final_reply"]['status'] = 'error';
+	$GLOBALS["source_specific_log"]->error("Source: " . $_POST['source'] . " ------>ERROR: LOCAL DB Error: " . $ex->getMessage());
+	echo json_encode($GLOBALS["final_reply"]);
+	exit;
+}
+$GLOBALS["source_specific_log"]->warning("Encoding switched to : " . $encoding['encoding']);
+
+try {
+	$GLOBALS["LOCAL_DB"]->query('truncate table ' . $source . '_today');
+} catch (MeekroDBException $ex) {
+	$GLOBALS["final_reply"]['status'] = 'error';
+	$GLOBALS["source_specific_log"]->error("Source: " . $_POST['source'] . " ---->ERROR: LOCAL DB Error: " . $ex->getMessage());
+	echo json_encode($GLOBALS["final_reply"]);
+	exit;
+}
+
+
 $step1 = microtime(true);
 $GLOBALS["source_specific_log"]->info('-->Reading CSV file');
-if ($source === 'ecb') {
-	$GLOBALS["source_specific_log"]->warning('---->Encoding switched to UTF-16LE');
-	$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv', 'UTF-16LE');
-} elseif ($source === 'brazilbonds') {
-	$GLOBALS["source_specific_log"]->warning('---->Encoding switched to ISO-8859-2');
-	$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv', 'ISO-8859-2');
-} else {
-	$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv');
-}
-$GLOBALS["source_specific_log"]->info('-->' . timeDiff($step1, microtime(true)));
 
+$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv', $encoding['encoding']);
+
+// if ($source === 'ecb') {
+// 	$GLOBALS["source_specific_log"]->warning('---->Encoding switched to UTF-16LE');
+// 	$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv', 'UTF-16LE');
+// } elseif ($source === 'brazilbonds') {
+// 	$GLOBALS["source_specific_log"]->warning('---->Encoding switched to ISO-8859-2');
+// 	$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv', 'ISO-8859-2');
+// } else {
+// 	$extracted_data_from_csv = getExcelCSVFasterUsingSpout($file_name, 'csv');
+// }
+$GLOBALS["source_specific_log"]->info('-->' . timeDiff($step1, microtime(true)));
 /////// ----------------------STEP 1 Cleanup the data(Remove unnecessary columns and correct indexes)----------------------
 $step12 = microtime(true);
 $GLOBALS["source_specific_log"]->info('-->Data CleanUp');
@@ -87,6 +107,8 @@ try {
 	exit;
 }
 //add today data
+
+//this is sloer but may decrease RAM consumption compared to giving all array directly
 try {
 	$GLOBALS["LOCAL_DB"]->insert($source . '_today', $all_data_with_correct_columns);
 } catch (MeekroDBException $ex) {
@@ -95,6 +117,19 @@ try {
 	echo json_encode($GLOBALS["final_reply"]);
 	exit;
 }
+
+
+// foreach ($all_data_with_correct_columns as $one_row) { //this is slower but may decrease RAM consumption compared to giving all array directly
+// 	try {
+// 		$GLOBALS["LOCAL_DB"]->insert($source . '_today', $one_row);
+// 	} catch (MeekroDBException $ex) {
+// 		$GLOBALS["final_reply"]['status'] = 'error';
+// 		$GLOBALS["source_specific_log"]->error("Source: " . $_POST['source'] . " ---->ERROR: LOCAL DB Error: " . $ex->getMessage());
+// 		echo json_encode($GLOBALS["final_reply"]);
+// 		exit;
+// 	}
+// }
+
 Write_progress(50); //was 20
 $GLOBALS["source_specific_log"]->info('-->' . timeDiff($step2, microtime(true)));
 
@@ -316,15 +351,19 @@ function getExcelCSVFasterUsingSpout($file_name, $file_type, $encoding = 'UTF-8'
 	} else {
 		$reader = ReaderFactory::create(Type::XLSX);
 	}
-	$reader->open($file_name);
-	$all_data = array();
-	foreach ($reader->getSheetIterator() as $sheet) {
-		foreach ($sheet->getRowIterator() as $row) {
-			array_push($all_data, $row);
+	try {
+		$reader->open($file_name);
+		$all_data = array();
+		foreach ($reader->getSheetIterator() as $sheet) {
+			foreach ($sheet->getRowIterator() as $row) {
+				array_push($all_data, $row);
+			}
 		}
+		$reader->close();
+		return $all_data;
+	} catch (Exception $ex) {
+		$GLOBALS["source_specific_log"]->error('------>Error Reading file : ' . $ex->getMessage());
 	}
-	$reader->close();
-	return $all_data;
 }
 
 

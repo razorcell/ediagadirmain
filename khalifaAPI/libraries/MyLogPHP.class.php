@@ -65,7 +65,7 @@ class MyLogPHP
 	private function log($errorlevel = 'INFO', $value = '', $tag)
 	{
 
-		$datetime = @date("Ymd Hi");
+		$datetime = @date("ymd");
 		if (!file_exists($this->LOGFILENAME)) {
 			$headers = $this->HEADERS . "\n";
 		}
@@ -82,7 +82,8 @@ class MyLogPHP
 
 		$value = preg_replace('/\s+/', ' ', trim($value));
 		// Edit here to output time and other vars.....    
-		$entry = array($datetime, NULL, NULL, $value, NULL, NULL);
+		$entry = array($datetime, $value);
+		// $entry = array($datetime, NULL, NULL, $value, NULL, NULL);
 
 		fputcsv($fd, $entry, $this->SEPARATOR);
 

@@ -98,12 +98,16 @@ if (!securePage($_SERVER['PHP_SELF'])) {
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
               <!-- <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg" /> -->
               <span class="username username-hide-on-mobile"><strong> <?php
-                                                              echo $user->data()->fname . ' ' . $user->data()->lname;
-                                                              ?> </span>
-             </strong> <span id="username" hidden><?php echo $user->data()->username; ?></span>
+                                                                      echo $user->data()->fname . ' ' . $user->data()->lname;
+                                                                      ?> </span>
+              </strong> <span id="username" hidden><?php echo $user->data()->username; ?></span>
               <i class="fa fa-angle-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-default">
+              <li>
+                <a href="/">
+                  <i class=" icon-user"></i> Home page </a>
+              </li>
               <li>
                 <a href="../users/account.php">
                   <i class=" icon-user"></i> View Profile </a>

@@ -9,9 +9,9 @@ $GLOBALS["final_reply"] = array("status" => "success");
 
 /////// ----------------------Main checks----------------------
 
-if (!isset($_POST["admin_password"]) or $_POST["admin_password"] !== 'Edmk1123581321') {
-    exitAppOnError("'Admin Password' incorrect");
-}
+// if (!isset($_POST["admin_password"]) or $_POST["admin_password"] !== 'Edmk1123581321') {
+//     exitAppOnError("'Admin Password' incorrect");
+// }
 if (!isset($_POST["source_name"]) or !preg_match('/^[a-zA-Z][a-zA-Z1-9]{1,25}$/', $_POST["source_name"])) {
     exitAppOnError("'Name' field not valid. Should be between (1-26 characters / digits)");
 } else {
@@ -33,22 +33,23 @@ if (isset($_POST["ignored_rows"])) {
 } else {
     $ignored_rows = 'none';
 }
-if (!isset($_POST["database_password"]) or !preg_match('/^.{1,100}$/', $_POST["database_password"])) {
-    exitAppOnError("'Database password' not valid. (any char) 1 - 100");
-} else {
-    $database_password = $_POST["database_password"];
-}
+// if (!isset($_POST["database_password"]) or !preg_match('/^.{1,100}$/', $_POST["database_password"])) {
+//     exitAppOnError("'Database password' not valid. (any char) 1 - 100");
+// } else {
+//     $database_password = $_POST["database_password"];
+// }
 if (!isset($_POST["file_encoding"]) or !isEncodingStringValid($_POST["file_encoding"])) {
     exitAppOnError("Please select a valid encoding");
 } else {
     $file_encoding = $_POST["file_encoding"];
 }
 
+$team = $_POST["team"];
 
 /////// ----------------------INITIALIZATION 2 ----------------------
 
 //Local smart_calendar DB connection
-$GLOBALS["LOCAL_DB"] = new MeekroDB(EXCELANALYZER_DB_HOST, DB_USER, DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
+$LOCAL_DB = new MeekroDB(EXCELANALYZER_DB_HOST, EXCELANALYZER_DB_USER, EXCELANALYZER_DB_PASSWORD, EXCELANALYZER_DB_NAME, NULL, 'utf8');
 $GLOBALS["LOCAL_DB"]->error_handler = false; // since we're catching errors, don't need error handler
 $GLOBALS["LOCAL_DB"]->throw_exception_on_error = true; //enable exceptions for the DB
 
@@ -56,6 +57,7 @@ $GLOBALS["general-log"]->info("Add new source  - <strong> $source_name </strong>
 $GLOBALS["general-log"]->info("Monitor columns = " . $columns_string);
 $GLOBALS["general-log"]->info("Ignore rows = " . $ignored_rows);
 $GLOBALS["general-log"]->info("File encoding = " . $file_encoding);
+$GLOBALS["general-log"]->info("Team = " . $team);
 
 /////// ----------------------Add to existing_sources table ----------------------
 
@@ -66,6 +68,7 @@ try {
         'ignorerows' => $ignored_rows,
         'logfile' => 'log/' . $source_name . '-logs.csv',
         'encoding' => $file_encoding,
+        'team' => $team,
     ));
 } catch (MeekroDBException $ex) {
     exitAppOnError("ERROR: LOCAL DB Error: " . $ex->getMessage());
